@@ -1,0 +1,16 @@
+---
+function formatCurrency(amount: number) {
+    return new Intl.NumberFormat('en-US', {
+        currency: 'usd',
+        style: 'currency'
+    }).format(amount)
+}
+
+const result = await fetch('https://astro-frontend-masters-api.netlify.app/api/products')
+
+if (!result.ok) {
+    console.error(result)
+}
+
+const shopItems: ShopItem[] = await result.json()
+---
