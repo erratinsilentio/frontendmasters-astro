@@ -1,16 +1,20 @@
 ---
+import type {ShopItem} from "../types.d.ts"
+
 function formatCurrency(amount: number) {
-    return new Intl.NumberFormat('en-US', {
-        currency: 'usd',
-        style: 'currency'
-    }).format(amount)
+	return new Intl.NumberFormat('en-US', {
+		currency: 'usd',
+		style: 'currency',
+	}).format(amount);
 }
 
-const result = await fetch('https://astro-frontend-masters-api.netlify.app/api/products')
+const result = await fetch(
+	'https://astro-frontend-masters-api.netlify.app/api/products',
+);
 
 if (!result.ok) {
-    console.error(result)
+	console.error(result);
 }
 
-const shopItems: ShopItem[] = await result.json()
+const shopItems: ShopItem[] = await result.json();
 ---

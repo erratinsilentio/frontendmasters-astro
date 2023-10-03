@@ -1,9 +1,9 @@
-type CartItem = {
+export type CartItem = {
   quantity: number;
   item: ShopItem;
 };
 
-type ShopItem = {
+export type ShopItem = {
   id: number;
   title: string;
   description: string;
