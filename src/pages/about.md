@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/page.astro"
+layout: ../layouts/page.astro
 ---
 
 # About sndwch
